@@ -5,10 +5,9 @@ body {
   margin: 0;
   padding: 0;
 
-  /* Metallic dark ombre background */
-  background: linear-gradient(180deg, #3a3a3a, #1c1c1c);
-  color: #e6e6e6;
-
+  /* Bluish background */
+  background: linear-gradient(180deg, #cce0ff, #99c2ff);
+  color: #222; /* darker text for contrast */
   scroll-behavior: smooth;
 }
 
@@ -19,8 +18,10 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: transparent;
-  color: white;
+
+  /* Light ombré header (whitish-greyish) */
+  background: linear-gradient(135deg, #f8f8f8, #dcdcdc);
+  color: #222;
   text-align: center;
   padding: 0 20px;
 }
