@@ -23,3 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const hire = document.querySelector('#hire .hire-modern');
   if (hire) observer.observe(hire);
 });
+document.querySelectorAll('.project-carousel').forEach(carousel => {
+    const slides = carousel.querySelectorAll('img');
+    let current = 0;
+    slides[current].classList.add('active');
+
+    setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+    }, 3000); // change slide every 3 seconds
+});
+

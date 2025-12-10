@@ -341,3 +341,39 @@ footer {
     background: #7e57c2;
     transform: translateY(-3px);
 }
+.project-carousel {
+    position: relative;
+    overflow: hidden;
+    height: 200px; /* adjust height as needed */
+    margin-bottom: 15px;
+    border-radius: 12px;
+}
+
+.project-carousel img {
+    width: 100%;
+    display: none; /* hide all images initially */
+    border-radius: 12px;
+}
+
+.project-carousel img.active {
+    display: block; /* show only the active image */
+}
+
+.project-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 8px;
+    background: #42a5f5;
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    margin-top: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.project-btn:hover {
+    background: #7e57c2;
+    transform: translateY(-2px);
+}
