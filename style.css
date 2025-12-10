@@ -4,8 +4,11 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background: #f7f9fc; /* light, neutral */
-  color: #333;
+
+  /* Metallic dark ombre background */
+  background: linear-gradient(180deg, #3a3a3a, #1c1c1c);
+  color: #e6e6e6;
+
   scroll-behavior: smooth;
 }
 
@@ -16,7 +19,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(135deg, #42a5f5, #7e57c2);
+  background: transparent;
   color: white;
   text-align: center;
   padding: 0 20px;
@@ -126,7 +129,15 @@ header {
     width: 300px;
     box-shadow: 0 10px 26px rgba(0,0,0,0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: black; /* <-- NEW */
 }
+
+.about-box h3,
+.about-box p,
+.about-box ul {
+    color: black; /* <-- ensures all text is black */
+}
+
 
 .about-box:hover {
     transform: translateY(-6px);
@@ -162,7 +173,7 @@ header {
     max-width: 700px;
     margin: 0 auto 30px auto;
     line-height: 1.6;
-    color: #444;
+    color: white;
 }
 
 .resume-btn {
@@ -280,4 +291,53 @@ footer {
         justify-content: center;
         gap: 40px;
     }
+}
+/* ========== HIRE ME SECTION ========== */
+.hire-modern {
+    padding: 90px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+.hire-modern.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hire-modern h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    background: linear-gradient(135deg, #42a5f5, #7e57c2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hire-lead {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    line-height: 1.6;
+    color: white;
+}
+
+.hire-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 10px;
+    background: #42a5f5;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.hire-btn:hover {
+    background: #7e57c2;
+    transform: translateY(-3px);
 }

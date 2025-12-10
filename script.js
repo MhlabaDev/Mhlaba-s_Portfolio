@@ -18,4 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Observe all project cards
   document.querySelectorAll('.project').forEach(card => observer.observe(card));
+
+  // Observe Hire Me Section (fix: moved inside DOMContentLoaded)
+  const hire = document.querySelector('#hire .hire-modern');
+  if (hire) observer.observe(hire);
 });
